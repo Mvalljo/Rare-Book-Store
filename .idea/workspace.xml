@@ -5,11 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca9392d4-bb0e-4137-a88c-e678e81c7863" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/customer-service/src/main/java/com/company/customerservice/model/Book.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-inventory-service/src/main/java/com/company/bookinventoryservice/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-inventory-service/src/main/java/com/company/bookinventoryservice/controller/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-inventory-service/src/main/java/com/company/bookinventoryservice/model/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-inventory-service/src/main/java/com/company/bookinventoryservice/model/Book.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/book-inventory-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/book-inventory-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookstore-cloud-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bookstore-cloud-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-inventory-service/src/test/java/com/company/bookinventoryservice/controller/BookControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-inventory-service/src/test/java/com/company/bookinventoryservice/controller/BookControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-inventory-service/src/test/java/com/company/bookinventoryservice/repository/BookRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-inventory-service/src/test/java/com/company/bookinventoryservice/repository/BookRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-inventory-service/src/test/java/com/company/bookinventoryservice/repository/BookRepositoryTestMockito.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-inventory-service/src/test/java/com/company/bookinventoryservice/repository/BookRepositoryTestMockito.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bookstore-cloud-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/bookstore-cloud-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/com/company/customerservice/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/java/com/company/customerservice/model/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/customer-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,8 +58,8 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/bookstore-cloud-service/src/main/java/com/company" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/book-inventory-service/pom.xml" />
-    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
@@ -62,8 +68,11 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.company.bookinventoryservice.controller" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.company.customerservice.model" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.CustomerServiceApplication">
+  <component name="RunManager" selected="Application.BookstoreCloudServiceApplication">
     <configuration name="BookInventoryServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.bookinventoryservice.BookInventoryServiceApplication" />
       <module name="book-inventory-service" />
@@ -144,9 +153,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BookstoreCloudServiceApplication" />
         <item itemvalue="Application.CustomerServiceApplication" />
         <item itemvalue="Application.BookInventoryServiceApplication" />
-        <item itemvalue="Application.BookstoreCloudServiceApplication" />
         <item itemvalue="Application.ServiceRegistryApplication" />
         <item itemvalue="Application.BookstoreConfigServiceApplication" />
       </list>

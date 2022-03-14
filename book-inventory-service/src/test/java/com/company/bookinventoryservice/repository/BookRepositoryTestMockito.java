@@ -30,7 +30,7 @@ public class BookRepositoryTestMockito {
     public void setUp() throws Exception {
         outputBook =  new Book("Drinking At The Shadows","Shelby T. Rivers","Western","1924",
                 "1st","Hardcover","Fine",589.60);
-        outputBook.setId(1);
+        outputBook.setBookId(1);
 
         bookList = new ArrayList<>();
         bookList.add(outputBook);
@@ -41,7 +41,7 @@ public class BookRepositoryTestMockito {
 
         Book book1 = new Book("Drinking At The Shadows","Shelby T. Rivers","Western","1924",
                 "1st","Hardcover","Fine",589.60);
-        book1.setId(1);
+        book1.setBookId(1);
 
         when(bookRepository.save(book1)).thenReturn(book1);
 
@@ -61,11 +61,11 @@ public class BookRepositoryTestMockito {
     public void getBookById() {
         Book book1 = new Book("Drinking At The Shadows","Shelby T. Rivers","Western","1924",
                 "1st","Hardcover","Fine",589.60);
-        book1.setId(1);
+        book1.setBookId(1);
 
-        when(bookRepository.findById(outputBook.getId())).thenReturn(Optional.ofNullable(outputBook));
+        when(bookRepository.findById(outputBook.getBookId())).thenReturn(Optional.ofNullable(outputBook));
 
-        Optional<Book> book2 = bookRepository.findById(outputBook.getId());
+        Optional<Book> book2 = bookRepository.findById(outputBook.getBookId());
         assertEquals(book2.get(),book1);
 
     }
@@ -74,11 +74,11 @@ public class BookRepositoryTestMockito {
     public void updateBookById() {
         Book book1 = new Book("Drinking At The Shadows","Shelby T. Rivers","Western","1924",
                 "1st","Hardcover","Fine",999.60);
-        book1.setId(1);
+        book1.setBookId(1);
 
         when(bookRepository.save(book1)).thenReturn(book1);
 
-        when(bookRepository.findById(outputBook.getId())).thenReturn(Optional.ofNullable(outputBook));
+        when(bookRepository.findById(outputBook.getBookId())).thenReturn(Optional.ofNullable(outputBook));
 
         boolean test = book1.equals(outputBook);
 
@@ -94,13 +94,13 @@ public class BookRepositoryTestMockito {
     public void getBookByAuthor() {
         Book book1 = new Book("Drinking At The Shadows","Shelby T. Rivers","Western","1924",
                 "1st","Hardcover","Fine",589.60);
-        book1.setId(1);
+        book1.setBookId(1);
 
         when(bookRepository.save(book1)).thenReturn(book1);
 
         Book book2 = new Book("Hurt By History","Shelby T. Rivers","Non-fiction","1931",
                 "1st","Hardcover","Near-Fine",986.98);
-        book2.setId(2);
+        book2.setBookId(2);
 
         when(bookRepository.save(book2)).thenReturn(book2);
 
@@ -119,13 +119,13 @@ public class BookRepositoryTestMockito {
     public void getBookByGenre() {
         Book book1 = new Book("Drinking At The Shadows","Shelby T. Rivers","Western","1924",
                 "1st","Hardcover","Fine",589.60);
-        book1.setId(1);
+        book1.setBookId(1);
 
         when(bookRepository.save(book1)).thenReturn(book1);
 
         Book book2 = new Book("Hurt By History","Shelby T. Rivers","Western","1931",
                 "1st","Hardcover","Near-Fine",986.98);
-        book2.setId(2);
+        book2.setBookId(2);
 
         when(bookRepository.save(book2)).thenReturn(book2);
 
@@ -146,13 +146,13 @@ public class BookRepositoryTestMockito {
 
         Book book1 = new Book("Drinking At The Shadows","Shelby T. Rivers","Western","1924",
                 "1st","Hardcover","Fine",589.60);
-        book1.setId(1);
+        book1.setBookId(1);
 
         when(bookRepository.save(book1)).thenReturn(book1);
 
         Book book2 = new Book("Hurt By History","Shelby T. Rivers","Western","1931",
                 "1st","Hardcover","Fine",986.98);
-        book2.setId(2);
+        book2.setBookId(2);
 
         when(bookRepository.save(book2)).thenReturn(book2);
 

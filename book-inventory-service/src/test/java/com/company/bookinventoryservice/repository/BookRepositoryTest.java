@@ -35,13 +35,13 @@ public class BookRepositoryTest {
 
         book = bookRepository.save(book);
 
-        Optional<Book> book1 = bookRepository.findById(book.getId());
+        Optional<Book> book1 = bookRepository.findById(book.getBookId());
 
         assertEquals(book1.get(),book);
 
-        bookRepository.deleteById(book.getId());
+        bookRepository.deleteById(book.getBookId());
 
-        book1 = bookRepository.findById(book.getId());
+        book1 = bookRepository.findById(book.getBookId());
 
         assertFalse(book1.isPresent());
     }
@@ -75,7 +75,7 @@ public class BookRepositoryTest {
 
         bookRepository.save(book);
 
-        Optional<Book> book1 = bookRepository.findById(book.getId());
+        Optional<Book> book1 = bookRepository.findById(book.getBookId());
         assertEquals(book1.get(), book);
 
     }

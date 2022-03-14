@@ -24,10 +24,10 @@ public class BookController {
     }
 
     //GET BOOK BY ID
-    @GetMapping("/books/{id}")
+    @GetMapping("/books/{bookId}")
     @ResponseStatus(HttpStatus.OK)
-    public Book getBookById(@PathVariable Integer id) {
-        Optional<Book> returnVal = bookRepository.findById(id);
+    public Book getBookById(@PathVariable Integer bookId) {
+        Optional<Book> returnVal = bookRepository.findById(bookId);
         return returnVal.orElse(null);
     }
 
@@ -64,7 +64,7 @@ public class BookController {
     @PutMapping("/books/{id}")
     @ResponseStatus(HttpStatus.OK)
     public void updateBook(@RequestBody Book book, @PathVariable Integer id) {
-        if(book.getId() != id) {
+        if(book.getBookId() != id) {
             throw new IllegalArgumentException("Entered ID does not match existing book ID");
         }
         bookRepository.save(book);

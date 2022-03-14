@@ -1,4 +1,4 @@
-package com.company.bookinventoryservice.model;
+package com.company.customerservice.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 

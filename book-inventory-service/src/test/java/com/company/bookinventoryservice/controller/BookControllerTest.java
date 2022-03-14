@@ -46,7 +46,7 @@ public class BookControllerTest {
 
         outputBook =  new Book("Drinking At The Shadows","Shelby T. Rivers","Western","1924",
                 "1st","Hardcover","Fine",589.60);
-        outputBook.setId(1);
+        outputBook.setBookId(1);
         outputBookJson = mapper.writeValueAsString(outputBook);
 
        bookList = new ArrayList<>();
@@ -61,7 +61,7 @@ public class BookControllerTest {
 
         Book book1 = new Book("Drinking At The Shadows","Shelby T. Rivers","Western","1924",
                 "1st","Hardcover","Fine",589.60);
-        book1.setId(1);
+        book1.setBookId(1);
 
         String inputJson = mapper.writeValueAsString(book1);
 
@@ -80,7 +80,7 @@ public class BookControllerTest {
     @Test
     public void shouldReturnBookById() throws Exception {
 
-        when(bookRepository.findById(outputBook.getId())).thenReturn(Optional.ofNullable(outputBook));
+        when(bookRepository.findById(outputBook.getBookId())).thenReturn(Optional.ofNullable(outputBook));
 
         mockMvc.perform(get("/books/1"))
                 .andDo(print())
@@ -102,7 +102,7 @@ public class BookControllerTest {
     public void shouldUpdateBookOnPut() throws Exception {
         Book book1 = new Book("Drinking At The Shadows","Shelby T. Rivers","Western","1924",
                 "1st","Hardcover","Fine",589.60);
-        book1.setId(1);
+        book1.setBookId(1);
 
         String inputJson = mapper.writeValueAsString(book1);
 
@@ -125,13 +125,13 @@ public class BookControllerTest {
     public void shouldReturnBooksByAuthor() throws Exception {
         Book book1 = new Book("Drinking At The Shadows","Shelby T. Rivers","Western","1924",
                 "1st","Hardcover","Fine",589.60);
-        book1.setId(1);
+        book1.setBookId(1);
 
         when(bookRepository.save(book1)).thenReturn(book1);
 
         Book book2 = new Book("Hurt By History","Shelby T. Rivers","Non-fiction","1931",
                 "1st","Hardcover","Near-Fine",986.98);
-        book2.setId(2);
+        book2.setBookId(2);
 
         when(bookRepository.save(book2)).thenReturn(book2);
 
@@ -151,13 +151,13 @@ public class BookControllerTest {
     public void shouldReturnBooksByGenre() throws Exception {
         Book book1 = new Book("Drinking At The Shadows","Shelby T. Rivers","Western","1924",
                 "1st","Hardcover","Fine",589.60);
-        book1.setId(1);
+        book1.setBookId(1);
 
         when(bookRepository.save(book1)).thenReturn(book1);
 
         Book book2 = new Book("Hurt By History","Lars J. Singleton","Non-fiction","1931",
                 "1st","Hardcover","Near-Fine",986.98);
-        book2.setId(2);
+        book2.setBookId(2);
 
         when(bookRepository.save(book2)).thenReturn(book2);
 
@@ -177,13 +177,13 @@ public class BookControllerTest {
     public void shouldReturnBooksByBookCondition() throws Exception {
         Book book1 = new Book("Drinking At The Shadows","Shelby T. Rivers","Western","1924",
                 "1st","Hardcover","Near-Fine",589.60);
-        book1.setId(1);
+        book1.setBookId(1);
 
         when(bookRepository.save(book1)).thenReturn(book1);
 
         Book book2 = new Book("Hurt By History","Lars J. Singleton","Non-fiction","1931",
                 "1st","Hardcover","Near-Fine",986.98);
-        book2.setId(2);
+        book2.setBookId(2);
 
         when(bookRepository.save(book2)).thenReturn(book2);
 
